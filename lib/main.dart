@@ -25,6 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<bool> selectedBoldItalicUnderline = [false, false, false];
   @override
   Widget build(BuildContext context) {
     FocusNode focusNode = FocusNode();
@@ -91,8 +92,13 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Expanded(
             child: CupertinoButton(
-              onPressed: () => print('pressed B'),
-              color: Colors.grey[200],
+              onPressed: () => setState(() {
+                selectedBoldItalicUnderline[0] =
+                    selectedBoldItalicUnderline[0] ? false : true;
+              }),
+              color: selectedBoldItalicUnderline[0]
+                  ? Colors.grey[400]
+                  : Colors.grey[200],
               padding: EdgeInsets.all(0),
               child: Text(
                 'B',
@@ -102,9 +108,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             child: CupertinoButton(
-              onPressed: () => print('pressed I'),
+              onPressed: () => setState(() {
+                selectedBoldItalicUnderline[1] =
+                    selectedBoldItalicUnderline[1] ? false : true;
+              }),
               padding: EdgeInsets.all(0),
-              color: Colors.grey[200],
+              color: selectedBoldItalicUnderline[1]
+                  ? Colors.grey[400]
+                  : Colors.grey[200],
               child: Text(
                 'I',
                 style: TextStyle(color: Colors.black),
@@ -113,9 +124,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             child: CupertinoButton(
-              onPressed: () => print('pressed U'),
+              onPressed: () => setState(() {
+                selectedBoldItalicUnderline[2] =
+                    selectedBoldItalicUnderline[2] ? false : true;
+              }),
               padding: EdgeInsets.all(0),
-              color: Colors.grey[200],
+              color: selectedBoldItalicUnderline[2]
+                  ? Colors.grey[400]
+                  : Colors.grey[200],
               child: Text(
                 'U',
                 style: TextStyle(color: Colors.black),
