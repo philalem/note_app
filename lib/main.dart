@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,19 +25,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text(widget.title),
+        brightness: Brightness.light,
+        border: Border(bottom: BorderSide(color: Colors.transparent)),
+        actionsForegroundColor: Colors.transparent,
         backgroundColor: Colors.transparent,
       ),
       backgroundColor: Colors.grey[100],
@@ -48,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 CupertinoTextField(
+                  decoration: BoxDecoration(color: Colors.transparent),
                   textCapitalization: TextCapitalization.sentences,
                   placeholder: "Hello, World!",
                   placeholderStyle: TextStyle(color: Colors.red),
