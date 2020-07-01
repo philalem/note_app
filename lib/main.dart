@@ -32,25 +32,21 @@ class _MyHomePageState extends State<MyHomePage> {
         middle: Text(widget.title),
         brightness: Brightness.light,
         border: Border(bottom: BorderSide(color: Colors.transparent)),
-        actionsForegroundColor: Colors.transparent,
         backgroundColor: Colors.transparent,
       ),
       backgroundColor: Colors.grey[100],
       child: SafeArea(
-        child: Center(
-          child: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                CupertinoTextField(
-                  decoration: BoxDecoration(color: Colors.transparent),
-                  textCapitalization: TextCapitalization.sentences,
-                  placeholder: "Hello, World!",
-                  placeholderStyle: TextStyle(color: Colors.red),
-                ),
-              ],
-            ),
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: ListView(
+            children: <Widget>[
+              CupertinoTextField(
+                decoration: BoxDecoration(color: Colors.transparent),
+                textCapitalization: TextCapitalization.sentences,
+                placeholder: "Hello, World!",
+                placeholderStyle: TextStyle(color: Colors.red),
+              ),
+            ],
           ),
         ),
       ),
