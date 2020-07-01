@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     selectedBoldItalicUnderline[0] ? false : true;
               }),
               color: selectedBoldItalicUnderline[0]
-                  ? Colors.grey[400]
+                  ? Colors.grey[500]
                   : Colors.grey[200],
               padding: EdgeInsets.all(0),
               child: Text(
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
               }),
               padding: EdgeInsets.all(0),
               color: selectedBoldItalicUnderline[1]
-                  ? Colors.grey[400]
+                  ? Colors.grey[500]
                   : Colors.grey[200],
               child: Text(
                 'I',
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
               }),
               padding: EdgeInsets.all(0),
               color: selectedBoldItalicUnderline[2]
-                  ? Colors.grey[400]
+                  ? Colors.grey[500]
                   : Colors.grey[200],
               child: Text(
                 'U',
